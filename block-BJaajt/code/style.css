@@ -43,82 +43,77 @@ table {
 }
 * {
     box-sizing: border-box;
-  }
+}
 
-  /* custom css */
+/* custom css */
 
-  body {
-    background-color: #F1DEB8;
-  }
-  .flex {
-    display: flex;
-  }
-  .align-center {
-    align-items: center;
-    padding: 1rem 0;
-  }
-  .userid {
-    text-decoration: none;
-  }
-  header {
-    background-color: black;
-    padding: 1rem;
-  }
-  h1 {
+body {
+    text-align: center;
+}
+header {
+    background-color: grey;
+    color: white;
+    padding: 2rem 0;
     font-size: 2rem;
-    color: white;
-    text-align: center;
-  }
-  main {
-    text-align: center;
-  }
-  input {
-    padding: .5rem 2rem;
+}
+input {
+    padding: 0.5rem ;
     margin: 2rem 0;
-  }
-  .image-container {
-    width: 150px;
-    margin: 0 auto;
-  }
-  .full-width {
+}
+img {
     width: 100%;
-  }
-  img {
-    object-fit: cover;
+}
+.info {
+    width: 160px;
+    margin: 0 auto;
+}
+.info h3 {
+    margin: 0.5rem;
+
+}
+.info p {
+    margin: 0.5rem;
+}
+.list {
+    width: 50%;
+    display: flex;  
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+ul {
+    display: flex;
+    width: 20%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+li {
     border-radius: 50%;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    margin: .7rem 0;
-    text-decoration: underline;
-  }
-  .following, .followers {
-    text-align: left;
-    font-weight: 700;
-  }
-  .followers img, .following img {
-    width: 50px;
-    margin-left: .5rem;
-  }
-  .margin-right {
-    margin-left: 30rem;
-  }
-  .cat-img {
-    width: 300px;
-    object-fit: cover;
-    display: block;
+}
+.list p {
+    margin-top: 2rem;
+}
+.details {
+    margin-top: 3rem;
+}
+
+hr {
+    width: 100%;
+    margin: 4rem;
+}
+.cats {
     text-align: center;
-    margin: 2rem auto;
-    border-radius: 0;
-  }
-  button {
-    padding: .4rem 1.3rem;
-    border: 0;
-    background: #301F17;
-    font-size: 1.3rem;
-    font-weight: 600;
+}
+.cats h3{
+    padding: 2rem 0;
+    font-size: 2rem;
+    background-color: grey;
     color: white;
-    margin-bottom: 5rem;
+}
+.cat-img {
+    width: 300px;
+    padding: 2rem 0;
+}
+button {
+    padding: 0.5rem 1rem;
 }
