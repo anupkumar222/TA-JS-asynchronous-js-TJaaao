@@ -1,6 +1,9 @@
-let input = document.querySelector('input');
-let info = document.querySelector('.info');
-let image = document.querySelector('.info img');
+const url = `https://api.unsplash.com/photos/?client_id=_vTCAzNMbDBy8voHYD6f4Y0PZDOTKlb6-SEmHhOnaS4`;
+
+const getSearchUrl = (query) => `https://api.unsplash.com/search/collections?query=${query}&client_id=_vTCAzNMbDBy8voHYD6f4Y0PZDOTKlb6-SEmHhOnaS4`;
+// console.log(getSearchUrl);
+const root = document.querySelector('.images');
+const searchElm = document.querySelector('input');
 
 function fetch(url, successHandler) {
     let xhr = new XMLHttpRequest();
@@ -12,12 +15,26 @@ function fetch(url, successHandler) {
     xhr.send();
 }
 
-function handleInput() {
-    if(keyCode === 13 && input.value) {
-        let value = input.value;
+function displayImages(images) {
+        root.innerHTML = '';
+        images.forEach(image => {                                                                            
+            let li = document.createElement('li');
+            let img = document.createElement('img');
+            img.src = image.urls.thumb;
+            li.append(img);
+            root.append(li);
+        })
+    
+}
 
-       value = '';
+fetch(url, displayImages)
+
+function handleSearch(event) {
+    if(event.keyCode === 13 && searchElm.value) {
+        fetch(getSearchUrl(searchElm.value), (searchResult) => {
+            displayImages(searchResult.results);
+        })
     }
 }
 
-input.addEventListener('keydown', handleInput);
+searchElm.addEventListener('keyup', handleSearch)
