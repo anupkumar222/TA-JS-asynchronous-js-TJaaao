@@ -20,14 +20,14 @@ function displayImages(images) {
         images.forEach(image => {                                                                            
             let li = document.createElement('li');
             let img = document.createElement('img');
-            img.src = image.urls.thumb;
+            img.src = image.cover_photo? image.cover_photo.urls.thumb : image.urls.thumb ;
             li.append(img);
             root.append(li);
         })
     
 }
 
-fetch(url, displayImages)
+fetch(url, displayImages);
 
 function handleSearch(event) {
     if(event.keyCode === 13 && searchElm.value) {
