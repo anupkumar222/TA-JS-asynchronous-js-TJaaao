@@ -56,15 +56,24 @@ body {
     text-align: center;
 }
 header {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
     padding: 1rem;
     background-color: blueviolet;
     color: white;
     font-size: 2rem;
 }
-input {
-    margin: 2rem 0 ;
+/* select {
+    margin: 3rem auto;
+    width: 10%;
+    text-align: center;
+    text-align: center;
 }
 .news {
+    width: 60%;
+}
+.box {
     display: flex;
     justify-content: space-between;
 }
@@ -73,4 +82,27 @@ input {
 }
 .article {
     width: 70%;
+} */
+
+.option {
+    text-align: center;
+    margin: 2rem 0;
+    
+}
+.news {
+    width: 60%;
+    margin: 0 auto;
+    background-color: blanchedalmond;
+    padding: 1rem;
+}
+img {
+    width: 40%;
+}
+.article {
+    width: 55%;
+}
+li {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
 }
