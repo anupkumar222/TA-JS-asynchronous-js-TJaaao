@@ -7,5 +7,5 @@
 - Each book will have a button saying `Show Characters (24)` 24 is the number of characters in the book
 - When you click on the button `Show Characters (24)` it will open a popup with information about all the characters.
 - Each character being displayed in the popup will display `name`, `gender`, `aliases` and `tvSeries` they are a part of.
-- The popup will also have a cross icon. Once clicked it will close the popup.
+- The popup will also have a cross icon. Once clicked it will modal-close the popup.
 - Handle error and show loading indicator when ever data is fetched.
